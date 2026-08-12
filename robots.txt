@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gonzoexotics.github.io/sitemap.xml
