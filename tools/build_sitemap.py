@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from html import unescape
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 from xml.etree.ElementTree import Element, SubElement, indent, tostring
 import re
 
@@ -47,25 +47,34 @@ urlset = Element(
     },
 )
 
+image_count = 0
+
 for relative in PAGES:
     source = (ROOT / relative).read_text(encoding="utf-8")
     canonical = first(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)', source)
     title = first(r"<title>(.*?)</title>", source)
-    image_src = first(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', source)
-    if not image_src:
-        image_src = first(r'<img[^>]+src=["\']([^"\']+)', source)
-        image_src = urljoin(page_url(relative), image_src)
+    image_sources: list[str] = []
+    for image_src in re.findall(r'<img\b[^>]+src=["\']([^"\']+)', source, flags=re.I | re.S):
+        absolute = urljoin(page_url(relative), unescape(image_src.strip()))
+        if urlsplit(absolute).netloc == urlsplit(BASE).netloc and absolute not in image_sources:
+            image_sources.append(absolute)
+
+    og_image = first(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', source)
+    if og_image:
+        absolute_og = urljoin(page_url(relative), og_image)
+        if urlsplit(absolute_og).netloc == urlsplit(BASE).netloc and absolute_og not in image_sources:
+            image_sources.insert(0, absolute_og)
 
     url = SubElement(urlset, "url")
     SubElement(url, "loc").text = canonical or page_url(relative)
     SubElement(url, "lastmod").text = LASTMOD
 
-    if image_src:
+    for image_src in image_sources[:1000]:
         image = SubElement(url, "image:image")
         SubElement(image, "image:loc").text = image_src
-        SubElement(image, "image:title").text = title.split("|")[0].strip()
+        image_count += 1
 
 indent(urlset, space="  ")
 xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + tostring(urlset, encoding="unicode") + "\n"
 (ROOT / "sitemap.xml").write_text(xml, encoding="utf-8", newline="\n")
-print(f"Built sitemap.xml with {len(PAGES)} URLs and image entries")
+print(f"Built sitemap.xml with {len(PAGES)} URLs and {image_count} image entries")

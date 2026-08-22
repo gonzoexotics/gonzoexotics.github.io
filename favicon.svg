@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Gonzo Exotics</title>
+  <rect width="512" height="512" rx="96" fill="#070907"/>
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#d7a72d" stroke-width="14"/>
+  <text x="256" y="344" fill="#f1d451" font-family="Georgia, 'Times New Roman', serif" font-size="270" font-weight="700" text-anchor="middle">G</text>
+</svg>
