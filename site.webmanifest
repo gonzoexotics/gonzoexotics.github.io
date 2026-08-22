@@ -1,0 +1,19 @@
+{
+  "name": "Gonzo Exotics — hodowla i blog o zwierzętach egzotycznych",
+  "short_name": "Gonzo Exotics",
+  "description": "Hodowla gadów w Piekarach Śląskich oraz źródłowy blog o zwierzętach egzotycznych.",
+  "lang": "pl-PL",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070907",
+  "theme_color": "#070907",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
