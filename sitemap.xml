@@ -1,72 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gonzoexotics.github.io/</loc>
     <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
+      <image:title>Gonzo Exotics</image:title>
+    </image:image>
   </url>
-
   <url>
     <loc>https://gonzoexotics.github.io/morelia-viridis.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/morelia/morelia-v7-main.webp</image:loc>
+      <image:title>Morelia viridis — hodowla, terrarium i rozmnażanie</image:title>
+    </image:image>
   </url>
-
   <url>
     <loc>https://gonzoexotics.github.io/corallus-caninus.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/corallus-caninus/corallus-caninus-galeria-10.webp</image:loc>
+      <image:title>Corallus caninus — hodowla, terrarium i rozmnażanie</image:title>
+    </image:image>
   </url>
-
+  <url>
+    <loc>https://gonzoexotics.github.io/python-bivittatus.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/site/python-bivittatus-gonzo-exotics.webp</image:loc>
+      <image:title>Python bivittatus — hodowla, terrarium i genetyka</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/hodowla-python-bivittatus-2026.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/hodowla/python-bivittatus-2026/rodzice/para-02.webp</image:loc>
+      <image:title>Hera × Tyson 2026 — Python bivittatus — Gonzo Exotics</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://gonzoexotics.github.io/baza-wiedzy.html</loc>
     <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
+      <image:title>Blog o zwierzętach egzotycznych</image:title>
+    </image:image>
   </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html</loc>
-    <lastmod>2026-08-22</lastmod>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html</loc>
-    <lastmod>2026-08-22</lastmod>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/morelia-viridis-zmiana-koloru-neonaty-dorosle.html</loc>
-    <lastmod>2026-08-21</lastmod>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-genetyka-morphy-odmiany-barwne.html</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/corallus-batesii-marzenie-terrarysty.html</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/corallus-caninus-sezonowosc-wilgotnosc-zraszanie.html</loc>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-zywienie-tempo-wzrostu-kondycja.html</loc>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/baza-wiedzy/pyton-zielony-lokalizacje-morelia-viridis-azurea.html</loc>
-  </url>
-
-  <url>
-    <loc>https://gonzoexotics.github.io/python-bivittatus.html</loc>
-  </url>
-
   <url>
     <loc>https://gonzoexotics.github.io/galeria.html</loc>
     <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
+      <image:title>Galeria zwierząt egzotycznych</image:title>
+    </image:image>
   </url>
-
   <url>
-    <loc>https://gonzoexotics.github.io/hodowla-python-bivittatus-2026.html</loc>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/corallus-batesii-marzenie-terrarysty.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/corallus-batesii/corallus-batesii-tambopata-kyle-van-houtan.webp</image:loc>
+      <image:title>Corallus batesii — porównanie z C. caninus i hodowla</image:title>
+    </image:image>
   </url>
-
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/corallus-caninus-sezonowosc-wilgotnosc-zraszanie.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/corallus/corallus-wilgotnosc-01.webp</image:loc>
+      <image:title>Corallus caninus: wilgotność, zraszanie i pory roku</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/zakup-zdrowego-weza/morelia-zakup-zolty-01.webp</image:loc>
+      <image:title>Jak kupić zdrowego pytona zielonego i Corallus caninus?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/morelia-viridis-zmiana-koloru-neonaty-dorosle.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/morelia-viridis-ontogeneza/morelia-viridis-zolty-neonat-02.webp</image:loc>
+      <image:title>Morelia viridis: od żółtego neonata do zielonego dorosłego</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-genetyka-morphy-odmiany-barwne.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/python-bivittatus-genetyka/python-bivittatus-genetyka-hero.webp</image:loc>
+      <image:title>Python bivittatus: genetyka, morphy i odmiany barwne</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-zywienie-tempo-wzrostu-kondycja.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/python-bivittatus/python-bivittatus-albino-karmienie.webp</image:loc>
+      <image:title>Python bivittatus: żywienie, wzrost i kondycja</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/pyton-zielony-lokalizacje-morelia-viridis-azurea.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/morelia/lokalizacje/pyton-zielony-lokalizacje-02.webp</image:loc>
+      <image:title>Pyton zielony: lokalizacje, Morelia viridis i M. azurea</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
+      <image:title>Surykatka w domu: Tofik, opieka i zachowanie</image:title>
+    </image:image>
+  </url>
 </urlset>
