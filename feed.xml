@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Gonzo Exotics</title>
+    <link>https://gonzoexotics.github.io/baza-wiedzy.html</link>
+    <description>Sprawdzone opracowania o zwierzętach egzotycznych, ich biologii, zachowaniu, żywieniu i odpowiedzialnej opiece.</description>
+    <language>pl-PL</language>
+    <lastBuildDate>Sat, 22 Aug 2026 12:00:00 +0200</lastBuildDate>
+    <atom:link href="https://gonzoexotics.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surykatka w domu: Tofik między naturą a salonem</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html</guid>
+      <pubDate>Sat, 22 Aug 2026 12:00:00 +0200</pubDate>
+      <description>Historia Tofika zestawiona z wiedzą o zachowaniu, głosach, kopaniu, żywieniu i dobrostanie Suricata suricatta.</description>
+    </item>
+    <item>
+      <title>Jak kupić zdrowego pytona zielonego i Corallus caninus</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html</guid>
+      <pubDate>Sat, 22 Aug 2026 10:00:00 +0200</pubDate>
+      <description>Praktyczny audyt zdrowia, dokumentacji i warunków zakupu nadrzewnego węża.</description>
+    </item>
+    <item>
+      <title>Morelia viridis: od żółtego neonata do zielonego dorosłego</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/morelia-viridis-zmiana-koloru-neonaty-dorosle.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/morelia-viridis-zmiana-koloru-neonaty-dorosle.html</guid>
+      <pubDate>Fri, 21 Aug 2026 12:00:00 +0200</pubDate>
+      <description>Ontogenetyczna zmiana barwy pytona zielonego: mechanizm, tempo i granice przewidywania.</description>
+    </item>
+    <item>
+      <title>Python bivittatus: genetyka, morphy i odmiany barwne</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-genetyka-morphy-odmiany-barwne.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-genetyka-morphy-odmiany-barwne.html</guid>
+      <pubDate>Tue, 18 Aug 2026 14:00:00 +0200</pubDate>
+      <description>Dziedziczenie cech, prawdopodobieństwo, nazewnictwo morphów i etyczne planowanie kojarzeń.</description>
+    </item>
+    <item>
+      <title>Corallus batesii — marzenie terrarysty</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/corallus-batesii-marzenie-terrarysty.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/corallus-batesii-marzenie-terrarysty.html</guid>
+      <pubDate>Tue, 18 Aug 2026 12:00:00 +0200</pubDate>
+      <description>Biologia Corallus batesii, porównanie z Corallus caninus i realia odpowiedzialnej hodowli.</description>
+    </item>
+    <item>
+      <title>Pyton zielony: lokalizacje, taksonomia i pochodzenie</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/pyton-zielony-lokalizacje-morelia-viridis-azurea.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/pyton-zielony-lokalizacje-morelia-viridis-azurea.html</guid>
+      <pubDate>Sun, 16 Aug 2026 14:00:00 +0200</pubDate>
+      <description>Manokwari, Biak, Aru, Sorong i inne lokalizacje oraz współczesne spojrzenie na taksonomię pytonów zielonych.</description>
+    </item>
+    <item>
+      <title>Python bivittatus: żywienie, tempo wzrostu i kondycja</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-zywienie-tempo-wzrostu-kondycja.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/python-bivittatus-zywienie-tempo-wzrostu-kondycja.html</guid>
+      <pubDate>Sun, 16 Aug 2026 12:00:00 +0200</pubDate>
+      <description>Jak karmić pytona birmańskiego, oceniać kondycję i ograniczać ryzyko przekarmiania.</description>
+    </item>
+    <item>
+      <title>Corallus caninus: sezonowość, wilgotność i zraszanie</title>
+      <link>https://gonzoexotics.github.io/baza-wiedzy/corallus-caninus-sezonowosc-wilgotnosc-zraszanie.html</link>
+      <guid isPermaLink="true">https://gonzoexotics.github.io/baza-wiedzy/corallus-caninus-sezonowosc-wilgotnosc-zraszanie.html</guid>
+      <pubDate>Sat, 15 Aug 2026 12:00:00 +0200</pubDate>
+      <description>Cykl dobowy i sezonowy, wentylacja, nawodnienie oraz bezpieczne zraszanie Corallus caninus.</description>
+    </item>
+  </channel>
+</rss>
