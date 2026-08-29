@@ -9,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gonzoexotics.github.io/"
-LASTMOD = "2026-08-22"
+LASTMOD = "2026-08-28"
 
 PAGES = [
     "index.html",
@@ -22,6 +22,7 @@ PAGES = [
     "baza-wiedzy/corallus-batesii-marzenie-terrarysty.html",
     "baza-wiedzy/corallus-caninus-sezonowosc-wilgotnosc-zraszanie.html",
     "baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html",
+    "baza-wiedzy/jak-widzi-waz-wzrok-kolory-termowizja.html",
     "baza-wiedzy/morelia-viridis-zmiana-koloru-neonaty-dorosle.html",
     "baza-wiedzy/python-bivittatus-genetyka-morphy-odmiany-barwne.html",
     "baza-wiedzy/python-bivittatus-zywienie-tempo-wzrostu-kondycja.html",
