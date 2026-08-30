@@ -10,6 +10,12 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gonzoexotics.github.io/"
 LASTMOD = "2026-08-28"
+PAGE_LASTMOD = {
+    "index.html": "2026-08-30",
+    "baza-wiedzy.html": "2026-08-30",
+    "baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html": "2026-08-30",
+    "baza-wiedzy/smok-w-domu-teju-argentynski-drago.html": "2026-08-30",
+}
 
 PAGES = [
     "index.html",
@@ -28,6 +34,7 @@ PAGES = [
     "baza-wiedzy/python-bivittatus-zywienie-tempo-wzrostu-kondycja.html",
     "baza-wiedzy/pyton-zielony-lokalizacje-morelia-viridis-azurea.html",
     "baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html",
+    "baza-wiedzy/smok-w-domu-teju-argentynski-drago.html",
 ]
 
 
@@ -68,7 +75,7 @@ for relative in PAGES:
 
     url = SubElement(urlset, "url")
     SubElement(url, "loc").text = canonical or page_url(relative)
-    SubElement(url, "lastmod").text = LASTMOD
+    SubElement(url, "lastmod").text = PAGE_LASTMOD.get(relative, LASTMOD)
 
     for image_src in image_sources[:1000]:
         image = SubElement(url, "image:image")

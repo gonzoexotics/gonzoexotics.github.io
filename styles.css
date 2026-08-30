@@ -1031,6 +1031,8 @@ footer { border-top: 1px solid rgba(215,167,45,.2); padding: 28px clamp(24px, 6v
 @media(max-width:650px){.tofik-profile,.meerkat-nature-grid{grid-template-columns:1fr}.meerkat-quote,.meerkat-boundary,.behavior-bridge,.home-observation{padding:23px 20px}.meerkat-social-photo img,.meerkat-sleep-photo img,.meerkat-window-photo img{aspect-ratio:auto!important;max-height:78vh}}
 
 /* V24 — wydajność mobilna, stabilny układ i dostępność obrazów */
+.drago-card .knowledge-card-photo,.drago-card .home-article-photo{min-height:0;display:grid;align-items:center}
+.drago-card .knowledge-card-photo img,.drago-card .home-article-photo img{height:auto;object-fit:contain;aspect-ratio:4/3}
 img[width][height]{max-width:100%}
 .full-gallery a,.article-photo-pair figure,.article-photo{content-visibility:auto;contain-intrinsic-size:420px 420px}
 

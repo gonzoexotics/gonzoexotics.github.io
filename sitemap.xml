@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gonzoexotics.github.io/</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
     </image:image>
@@ -19,7 +19,7 @@
       <image:loc>https://gonzoexotics.github.io/assets/images/site/python-bivittatus-gonzo-exotics.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/zakup-zdrowego-weza/morelia-zakup-zielony-02.webp</image:loc>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-glowa-oko.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/site/morelia-viridis-karta-gatunku-archiwum.webp</image:loc>
@@ -229,7 +229,10 @@
   </url>
   <url>
     <loc>https://gonzoexotics.github.io/baza-wiedzy.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-30</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-glowa-oko.webp</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/zakup-zdrowego-weza/morelia-zakup-zielony-02.webp</image:loc>
     </image:image>
@@ -905,7 +908,7 @@
   </url>
   <url>
     <loc>https://gonzoexotics.github.io/baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
     </image:image>
@@ -929,6 +932,40 @@
     </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-sen.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/smok-w-domu-teju-argentynski-drago.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-odpoczynek.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-na-rekach.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-glowa-na-dloni.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-glowa-oko.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-obok-surykatki.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-w-terrarium.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-przy-balkonie.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-cala-sylwetka.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-na-poduszce.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-na-kolanach.webp</image:loc>
     </image:image>
   </url>
 </urlset>
