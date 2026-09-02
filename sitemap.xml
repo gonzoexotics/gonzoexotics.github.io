@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gonzoexotics.github.io/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
     </image:image>
@@ -19,7 +19,7 @@
       <image:loc>https://gonzoexotics.github.io/assets/images/site/python-bivittatus-gonzo-exotics.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-glowa-oko.webp</image:loc>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/morelia-viridis/morelia-viridis-zielony-zblizenie-glowy-gonzo-exotics.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/site/morelia-viridis-karta-gatunku-archiwum.webp</image:loc>
@@ -229,7 +229,10 @@
   </url>
   <url>
     <loc>https://gonzoexotics.github.io/baza-wiedzy.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/morelia-viridis/morelia-viridis-zielony-zblizenie-glowy-gonzo-exotics.webp</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-glowa-oko.webp</image:loc>
     </image:image>
@@ -791,7 +794,7 @@
   </url>
   <url>
     <loc>https://gonzoexotics.github.io/baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/zakup-zdrowego-weza/morelia-zakup-zolty-01.webp</image:loc>
     </image:image>
@@ -815,6 +818,22 @@
     </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.github.io/assets/images/publikacje/zakup-zdrowego-weza/morelia-zakup-zielony-03.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.github.io/baza-wiedzy/jaki-waz-na-poczatek-pierwszy-waz.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/morelia-viridis/morelia-viridis-zielony-zblizenie-glowy-gonzo-exotics.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/morelia-viridis/morelia-viridis-zolty-mlody-gonzo-exotics.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/corallus-caninus/corallus-caninus-galeria-01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.github.io/assets/images/gallery/python-bivittatus/python-bivittatus-albino-portret-gonzo-exotics.webp</image:loc>
     </image:image>
   </url>
   <url>

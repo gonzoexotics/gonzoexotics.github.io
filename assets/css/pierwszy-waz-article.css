@@ -1,0 +1,26 @@
+/* Styles scoped to the first-snake article. */
+.first-snake-article .article-hero-photo img{object-position:52% 48%}
+.first-snake-article .choice-principle{border:1px solid #51442c;background:linear-gradient(135deg,#1a1d15,#10120e);padding:30px;margin:30px 0}
+.first-snake-article .choice-principle strong{display:block;color:#f0d58e;font:500 clamp(25px,3vw,35px)/1.25 Georgia,serif;margin-bottom:12px}
+.first-snake-article .choice-principle p:last-child{margin-bottom:0}
+.first-snake-article .decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}
+.first-snake-article .decision-card{border:1px solid #3f3b2b;background:#151812;padding:22px}
+.first-snake-article .decision-card h3{font-size:22px;margin:0 0 12px;color:#ead18b}
+.first-snake-article .decision-card p{font-size:15px;margin:0;line-height:1.7}
+.first-snake-article .species-list{display:grid;gap:20px;margin:30px 0}
+.first-snake-article .species-choice{border-top:1px solid #4a432e;padding:24px 0 4px;display:grid;grid-template-columns:minmax(155px,.35fr) minmax(0,1fr);gap:28px}
+.first-snake-article .species-choice h3{font-size:24px;margin:0;color:#f0dfb4}
+.first-snake-article .species-choice .verdict{display:block;margin-top:8px;font:700 11px/1.4 Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#cda75a}
+.first-snake-article .species-choice p{font-size:16px;margin:0 0 12px;line-height:1.75}
+.first-snake-article .species-choice ul{margin:0;padding-left:20px}
+.first-snake-article .species-choice li{margin-bottom:8px}
+.first-snake-article .snake-photo-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0}
+.first-snake-article .snake-photo-row figure{margin:0;background:#11140f;border:1px solid #343124}
+.first-snake-article .snake-photo-row img{display:block;width:100%;height:330px;object-fit:cover}
+.first-snake-article .snake-photo-row figcaption{padding:14px;font-size:13px;line-height:1.55;color:#bfb7a8}
+.first-snake-article .readiness-list{counter-reset:ready;list-style:none;padding:0;display:grid;gap:14px}
+.first-snake-article .readiness-list li{counter-increment:ready;border-left:2px solid #cba250;background:#171a13;padding:18px 20px 18px 58px;position:relative}
+.first-snake-article .readiness-list li:before{content:counter(ready);position:absolute;left:20px;top:17px;color:#e0bd67;font:600 20px Georgia,serif}
+.first-snake-article .red-flags{border-left:3px solid #d78965;background:#241a14;padding:22px 24px;margin:28px 0}
+.first-snake-article .red-flags ul{margin-bottom:0}
+@media(max-width:760px){.first-snake-article .decision-grid,.first-snake-article .snake-photo-row{grid-template-columns:1fr}.first-snake-article .species-choice{grid-template-columns:1fr;gap:10px}.first-snake-article .snake-photo-row img{height:auto;max-height:520px;object-fit:contain}.first-snake-article .choice-principle{padding:22px}.first-snake-article .readiness-list li{padding-left:50px}}
