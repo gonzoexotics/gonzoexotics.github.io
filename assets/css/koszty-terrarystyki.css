@@ -1,0 +1,14 @@
+/* Keep the existing site's article layout; additions are limited to this post. */
+.costs-article .article-hero-photo img{object-position:50% 50%}
+.costs-article .article-hero-photo>p{max-width:calc(100% - 56px);line-height:1.6}
+.costs-article .article-content{min-width:0}
+.costs-article .cost-formula{padding:24px;border:1px solid #635435;background:#191c14;margin:28px 0}
+.costs-article .cost-formula strong{display:block;font:500 25px/1.4 Georgia,serif;color:#f0d58e}
+.costs-article .cost-formula p{margin:14px 0 0;font-size:15px}
+.costs-article .cost-budget th:first-child{width:50%}
+.costs-article .cost-budget th:nth-child(2){width:25%}
+.costs-article .cost-budget td{font-variant-numeric:tabular-nums}
+.costs-article .cost-budget .budget-total>*{background:#222619;color:#f0dfb4;font-weight:700}
+.costs-article .article-photo{max-width:640px;margin-left:auto;margin-right:auto}
+.costs-article .drago-table-wrap:focus-visible{outline:2px solid #e5cb87;outline-offset:4px}
+@media(max-width:650px){.costs-article .article-hero h1{font-size:clamp(32px,9vw,41px)}.costs-article .cost-budget{min-width:0}.costs-article .cost-budget th,.costs-article .cost-budget td{font-size:13px;padding:12px 8px}.costs-article .cost-formula{padding:20px}.costs-article .cost-formula strong{font-size:22px}}
