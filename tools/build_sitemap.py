@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gonzoexotics.github.io/"
 LASTMOD = "2026-08-28"
 PAGE_LASTMOD = {
-    "index.html": "2026-09-05",
-    "baza-wiedzy.html": "2026-09-05",
+    "index.html": "2026-09-06",
+    "baza-wiedzy.html": "2026-09-06",
     "morelia-viridis.html": "2026-09-05",
     "corallus-caninus.html": "2026-09-05",
     "baza-wiedzy/surykatka-w-domu-tofik-opieka-zachowanie-zywienie.html": "2026-08-30",
@@ -20,6 +20,7 @@ PAGE_LASTMOD = {
     "baza-wiedzy/jaki-waz-na-poczatek-pierwszy-waz.html": "2026-09-04",
     "baza-wiedzy/ile-kosztuje-utrzymanie-weza-terrarium.html": "2026-09-04",
     "baza-wiedzy/corallus-caninus-vs-morelia-viridis-porownanie.html": "2026-09-05",
+    "baza-wiedzy/czy-teju-rozpoznaje-opiekuna-inteligencja-drago.html": "2026-09-06",
     "baza-wiedzy/jak-kupic-zdrowego-pytona-zielonego-corallus-caninus.html": "2026-09-02",
 }
 
@@ -37,6 +38,7 @@ PAGES = [
     "baza-wiedzy/jaki-waz-na-poczatek-pierwszy-waz.html",
     "baza-wiedzy/ile-kosztuje-utrzymanie-weza-terrarium.html",
     "baza-wiedzy/corallus-caninus-vs-morelia-viridis-porownanie.html",
+    "baza-wiedzy/czy-teju-rozpoznaje-opiekuna-inteligencja-drago.html",
     "baza-wiedzy/jak-widzi-waz-wzrok-kolory-termowizja.html",
     "baza-wiedzy/morelia-viridis-zmiana-koloru-neonaty-dorosle.html",
     "baza-wiedzy/python-bivittatus-genetyka-morphy-odmiany-barwne.html",
