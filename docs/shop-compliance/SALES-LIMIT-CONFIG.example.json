@@ -1,0 +1,8 @@
+{
+  "year": 2026,
+  "currency": "PLN",
+  "unregisteredActivityQuarterlyRevenueLimit": 10813.5,
+  "warningThresholds": [0.8, 0.9, 1],
+  "source": "https://biznes.gov.pl/pl/firma/zakladanie-firmy/chce-wiedziec-jak-zalozyc-wlasna-firme/dzialalnosc-nierejestrowa-oraz-inne-sytuacje-w-ktorych-nie-trzeba-rejestrowac-firmy",
+  "note": "Wartość przykładowa dla 2026. Przed każdym rokiem i przed uruchomieniem sprzedaży zweryfikuj ją w źródle urzędowym oraz z księgowym."
+}

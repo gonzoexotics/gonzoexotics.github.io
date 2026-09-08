@@ -8,10 +8,14 @@ import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = "https://gonzoexotics.github.io/"
+BASE = "https://gonzoexotics.pl/"
 LASTMOD = "2026-08-28"
 PAGE_LASTMOD = {
-    "index.html": "2026-09-06",
+    "index.html": "2026-09-08",
+    "ebooki.html": "2026-09-08",
+    "ogloszenia.html": "2026-09-08",
+    "regulamin.html": "2026-09-08",
+    "polityka-prywatnosci.html": "2026-09-08",
     "baza-wiedzy.html": "2026-09-06",
     "morelia-viridis.html": "2026-09-05",
     "corallus-caninus.html": "2026-09-05",
@@ -26,6 +30,8 @@ PAGE_LASTMOD = {
 
 PAGES = [
     "index.html",
+    "ebooki.html",
+    "ogloszenia.html",
     "morelia-viridis.html",
     "corallus-caninus.html",
     "python-bivittatus.html",

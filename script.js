@@ -15,7 +15,8 @@ if (toggle && nav) {
   });
 }
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
 
 // Prosty lightbox galerii
