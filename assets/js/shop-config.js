@@ -10,6 +10,11 @@ window.GONZO_SHOP_CONFIG = Object.freeze({
     phone: "[TELEFON]",
     taxId: "[NIP – JEŻELI WYMAGANY]"
   }),
+  // To są nazwy wymaganych pól przyszłych rekordów, a nie aktywne produkty ani ogłoszenia.
+  schemas: Object.freeze({
+    digitalProductFields: ["title", "slug", "cover", "description", "price", "currency", "pages", "version", "checkoutUrl", "status", "publicationDate"],
+    animalAdFields: ["id", "species", "category", "hatchDate", "sex", "feeding", "origin", "documentStatus", "photos", "status", "contactUrl"]
+  }),
   digitalProducts: [],
   animalAds: [],
   adCategories: ["Corallus caninus","Morelia viridis","Python bivittatus","Pozostałe zwierzęta","Karmówka","Archiwum"]
