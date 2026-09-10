@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gonzoexotics.pl/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.pl/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
     </image:image>
@@ -30,6 +30,14 @@
     <image:image>
       <image:loc>https://gonzoexotics.pl/assets/hodowla/python-bivittatus-2026/rodzice/para-02.webp</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.pl/ebooki.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.pl/ogloszenia.html</loc>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://gonzoexotics.pl/morelia-viridis.html</loc>
@@ -232,7 +240,10 @@
   </url>
   <url>
     <loc>https://gonzoexotics.pl/baza-wiedzy.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-10</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/blog/tofik-prezes-zarzadu/tofik-prezes-zarzadu-hero.webp</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://gonzoexotics.pl/assets/images/blog/czy-teju-rozpoznaje-opiekuna/drago-teju-uczy-sie-rutyny-w-domu-960w.webp</image:loc>
     </image:image>
@@ -897,6 +908,22 @@
     </image:image>
   </url>
   <url>
+    <loc>https://gonzoexotics.pl/baza-wiedzy/tofik-prezes-zarzadu-kierownik-ochrony.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/blog/tofik-prezes-zarzadu/tofik-prezes-zarzadu-hero.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/blog/tofik-prezes-zarzadu/tofik-prezes-zarzadu-patrol.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/blog/tofik-prezes-zarzadu/tofik-prezes-zarzadu-domowy-kadr.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/blog/tofik-prezes-zarzadu/tofik-prezes-zarzadu-po-godzinach.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://gonzoexotics.pl/baza-wiedzy/jak-widzi-waz-wzrok-kolory-termowizja.html</loc>
     <lastmod>2026-08-28</lastmod>
     <image:image>
@@ -1046,13 +1073,5 @@
     <image:image>
       <image:loc>https://gonzoexotics.pl/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-na-kolanach.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://gonzoexotics.pl/ebooki.html</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://gonzoexotics.pl/ogloszenia.html</loc>
-    <lastmod>2026-09-08</lastmod>
   </url>
 </urlset>
