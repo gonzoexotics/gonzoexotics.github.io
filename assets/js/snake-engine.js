@@ -44,15 +44,39 @@
     if (a.lifespan === '15' && /20|25|30/.test(species.lifespan)) penalties.push('deklarowany horyzont opieki jest krótszy niż typowa długość życia gatunku');
     const pref=preference(species,a); let weighted=0; Object.entries(weights).forEach(([k,w])=>weighted += pref[k]*w);
     weighted -= penalties.length * 9;
+    const potentialScore=Math.max(0,Math.min(100,Math.round(weighted)));
     if (blocks.length) weighted=0;
     if (a.space >= species.recommendedEnclosureLength) why.push('masz realną przestrzeń na docelowe terrarium');
     if (a.climate >= species.climateDifficulty) why.push('deklarujesz poziom kontroli mikroklimatu odpowiedni do jego wymagań');
     if (a.handling === 'observation' && species.handlingPotential.includes('obserwacyjny')) why.push('Twoje oczekiwania są bliższe obserwacji niż regularnemu handlingowi');
     if (a.handling !== 'observation' && species.handlingPotential.includes('dobry')) why.push('jego potencjał do spokojnej obsługi pasuje do Twoich oczekiwań');
-    return { species, score:Math.max(0,Math.min(100,Math.round(weighted))), blocked:blocks.length>0, blocks, penalties, why, parts:pref };
+    return { species, score:Math.max(0,Math.min(100,Math.round(weighted))), potentialScore, blocked:blocks.length>0, conditional:false, blocks, penalties, why, parts:pref };
   }
-  function rank(species, answers) { return species.map(s=>scoreSpecies(s,answers)).filter(r=>!r.blocked && r.species.dataConfidence!=='low').sort((a,b)=>b.score-a.score); }
-  function explanation(r) { return r.why.length ? `Ten gatunek wypada wysoko, ponieważ ${r.why.slice(0,2).join(' oraz ')}.` : 'Wynik opiera się na zgodności miejsca, doświadczenia, klimatu i oczekiwań.'; }
+  function mayBeConditionalAlternative(result, answers) {
+    const species=result.species;
+    if (species.dataConfidence==='low') return false;
+    if (species.hardExclusions.minExperience==='advanced' && levels[answers.experience] < levels.advanced) return false;
+    if (species.largePreyRequired && answers.prey==='small') return false;
+    if (species.recommendedEnclosureLength > Math.max(120, answers.space * 1.35)) return false;
+    if (species.adultLengthMax >= 300 && answers.space < 300) return false;
+    if (answers.maintenance==='basic' && species.climateDifficulty >= 3) return false;
+    if (answers.adultPlan==='later' && species.recommendedEnclosureLength >= 180) return false;
+    return true;
+  }
+  function rank(species, answers) {
+    const all=species.map(s=>scoreSpecies(s,answers)).filter(r=>r.species.dataConfidence!=='low');
+    const safe=all.filter(r=>!r.blocked).sort((a,b)=>b.score-a.score);
+    if (safe.length>=3) return safe;
+    const conditional=all
+      .filter(r=>r.blocked && mayBeConditionalAlternative(r,answers))
+      .sort((a,b)=>a.blocks.length-b.blocks.length || b.potentialScore-a.potentialScore)
+      .map(r=>({...r,score:Math.max(1,r.potentialScore-r.blocks.length*12),blocked:false,conditional:true}));
+    return safe.concat(conditional).slice(0,Math.max(3,safe.length));
+  }
+  function explanation(r) {
+    if (r.conditional) return `To propozycja warunkowa. Przed wyborem musisz zmienić ten element planu: ${r.blocks.join('; ')}.`;
+    return r.why.length ? `Ten gatunek wypada wysoko, ponieważ ${r.why.slice(0,2).join(' oraz ')}.` : 'Wynik opiera się na zgodności miejsca, doświadczenia, klimatu i oczekiwań.';
+  }
   root.GonzoSnakeEngine=Object.freeze({weights,scoreSpecies,rank,explanation,levels});
 })(window);
 

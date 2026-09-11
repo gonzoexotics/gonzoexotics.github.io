@@ -20,6 +20,15 @@
   grid-template-columns: 1fr;
 }
 
+.result-list .conditional-result {
+  border-color: rgba(216, 181, 74, .62);
+}
+
+.result-list .conditional-result .result-why {
+  border-left-color: #d8b54a;
+  background: rgba(216, 181, 74, .10);
+}
+
 @media (max-width: 960px) {
   .result-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
