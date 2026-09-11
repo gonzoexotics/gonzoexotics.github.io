@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gonzoexotics.pl/"
 LASTMOD = "2026-08-28"
 PAGE_LASTMOD = {
-    "index.html": "2026-09-08",
+    "index.html": "2026-09-11",
+    "jaki-waz-dla-ciebie/index.html": "2026-09-11",
+    "porownaj-weze/index.html": "2026-09-11",
     "ebooki.html": "2026-09-08",
     "ogloszenia.html": "2026-09-08",
     "regulamin.html": "2026-09-08",
@@ -31,6 +33,8 @@ PAGE_LASTMOD = {
 
 PAGES = [
     "index.html",
+    "jaki-waz-dla-ciebie/index.html",
+    "porownaj-weze/index.html",
     "ebooki.html",
     "ogloszenia.html",
     "morelia-viridis.html",
