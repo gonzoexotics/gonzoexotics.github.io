@@ -30,6 +30,8 @@
     if (a.space < Math.min(species.hardExclusions.minSpace, species.recommendedEnclosureLength)) blocks.push('planowana długość terrarium jest za mała dla rozsądnego docelowego planu');
     if (levels[a.experience] < levels[species.hardExclusions.minExperience] && species.hardExclusions.minExperience === 'advanced') blocks.push('poziom doświadczenia nie odpowiada wąskiemu marginesowi błędów tego gatunku');
     if (species.largePreyRequired && a.prey === 'small') blocks.push('nie akceptujesz wielkości karmówki, której gatunek może wymagać jako dorosły');
+    if (a.adultPlan === 'later' && species.recommendedEnclosureLength >= 180) blocks.push('nie masz jeszcze pewnego planu na docelowe terrarium dużego gatunku');
+    if (a.maintenance === 'basic' && species.climateDifficulty >= 3) blocks.push('deklarujesz zbyt mało czasu na kontrolę mikroklimatu tego gatunku');
     if (levels[a.experience] < levels[species.hardExclusions.minExperience]) penalties.push('doświadczenie jest niższe niż rozsądny punkt wejścia');
     if (species.climateDifficulty > a.climate + 1) penalties.push('deklarowana gotowość do kontroli mikroklimatu jest za niska');
     if (a.avoid.includes('microclimate') && species.climateDifficulty >= 3) penalties.push('chcesz unikać trudnego mikroklimatu');
@@ -37,6 +39,9 @@
     if (a.avoid.includes('large-snake') && species.adultLengthMax >= 180) penalties.push('chcesz unikać dużego węża');
     if (a.avoid.includes('large-prey') && species.largePreyRequired) penalties.push('chcesz unikać dużej karmówki');
     if (a.avoid.includes('observation') && species.handlingPotential.includes('obserwacyjny')) penalties.push('nie chcesz gatunku przede wszystkim do obserwacji');
+    if (a.temperament === 'calm' && !species.handlingPotential.includes('dobry')) penalties.push('szukasz spokojniejszego gatunku niż sugeruje profil obsługi');
+    if (a.cbb === 'unknown') penalties.push('przed zakupem trzeba najpierw zrozumieć różnicę między CBB a niezweryfikowanym pochodzeniem');
+    if (a.lifespan === '15' && /20|25|30/.test(species.lifespan)) penalties.push('deklarowany horyzont opieki jest krótszy niż typowa długość życia gatunku');
     const pref=preference(species,a); let weighted=0; Object.entries(weights).forEach(([k,w])=>weighted += pref[k]*w);
     weighted -= penalties.length * 9;
     if (blocks.length) weighted=0;

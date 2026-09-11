@@ -1,10 +1,10 @@
 # Walidacja Gonzo Snake Match
 
-Data kontroli: 2026-09-11.
+Kontrola: 2026-09-11.
 
-- 15 profili gatunkowych.
-- 30 profili testowych: pierwszy wąż, mała przestrzeń, średnie doświadczenie, gatunki nadrzewne, duża zabudowa oraz warianty budżetowe.
-- Krytyczne przypadki: Python bivittatus jest zablokowany dla pierwszego węża i małej przestrzeni; Corallus caninus jest zablokowany przy doświadczeniu początkującym; zaawansowany profil nadrzewny może zobaczyć Morelia viridis lub Corallus caninus; profil z dużą przestrzenią i akceptacją dużej karmówki może zobaczyć Python bivittatus.
-- Wynik testu: PASS — 15 gatunków, 30 profili.
+- 15 profili gatunkowych, każde z własnym zdjęciem właściwego gatunku.
+- 15 pytań quizowych: doświadczenie, docelowa przestrzeń, pewność dorosłego terrarium, rozmiar, handling, temperament, typ terrarium, budżet, mikroklimat, czas na obsługę, karmówka, długość zobowiązania, CBB, rozmnażanie i ograniczenia.
+- 30 profili testowych oraz blokady krytyczne.
+- Python bivittatus jest blokowany przy profilu pierwszego węża i przestrzeni 120 cm; Corallus caninus jest blokowany dla początkującego; gatunki wymagające mikroklimatu są blokowane przy minimalnym nakładzie pracy.
 
-Parametry terrarium i mikroklimatu są opisane jako konserwatywny punkt wyjścia do dalszego przygotowania, a nie jako uniwersalne minimum. Status prawny i dokumentację zawsze sprawdza się dla konkretnego okazu.
+Wynik: PASS — 15 gatunków i 30 profili.
