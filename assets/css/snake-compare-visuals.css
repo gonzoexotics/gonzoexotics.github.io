@@ -1,0 +1,75 @@
+.species-picker {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.species-choice {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: .8rem;
+  align-items: center;
+  min-height: 92px;
+  padding: .55rem;
+}
+
+.species-choice-photo {
+  display: block;
+  width: 82px;
+  height: 70px;
+  overflow: hidden;
+  background: #202b22;
+  border: 1px solid rgba(216, 181, 74, .24);
+}
+
+.species-choice-photo img,
+.comparison-grid .snake-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.species-choice-copy {
+  display: block;
+  min-width: 0;
+}
+
+.species-choice-copy em,
+.species-choice-copy span {
+  display: block;
+}
+
+.species-choice-copy em {
+  color: #f5f1e6;
+  font-weight: 700;
+}
+
+.species-choice-copy span {
+  margin-top: .3rem;
+  color: #c5c8bf;
+  font-size: .88rem;
+}
+
+.comparison-grid .snake-photo {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.comparison-grid .snake-photo > span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.photo-credit a {
+  color: #d8b54a;
+}
+
+@media (max-width: 900px) {
+  .species-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .species-picker { grid-template-columns: 1fr; }
+}
+
