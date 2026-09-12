@@ -7,7 +7,7 @@
   let chosen = (params.get('species') || '').split(',').filter(id => species.some(item => item.id === id)).slice(0, 3);
   const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[character]));
   const imageUrl = item => item.image.startsWith('http') ? item.image : `../${item.image}`;
-  const image = (item, className, alt = '') => `<span class="${className}"><img src="${escapeHtml(imageUrl(item))}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>`;
+  const image = (item, className, alt = '') => `<span class="${className}"><img src="${escapeHtml(imageUrl(item))}" alt="${escapeHtml(alt)}" decoding="async" referrerpolicy="no-referrer" width="164" height="140"></span>`;
   const credit = item => item.imageCredit ? `<p class="photo-credit">${item.imageCreditUrl ? `<a href="${escapeHtml(item.imageCreditUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.imageCredit)}</a>` : escapeHtml(item.imageCredit)}</p>` : '';
   const section = (title, content) => `<details open><summary>${title}</summary><div>${content}</div></details>`;
 
