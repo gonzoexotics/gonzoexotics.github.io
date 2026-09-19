@@ -1,0 +1,185 @@
+.ebook-library {
+  padding-top: 3.5rem;
+}
+
+.ebook-tabs {
+  display: flex;
+  gap: 0.7rem;
+  margin: 1.6rem 0 1.4rem;
+  padding: 0.4rem;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(193, 156, 92, 0.3);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.ebook-tab {
+  min-width: 8.5rem;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--commerce-muted);
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ebook-tab:hover {
+  color: #fff;
+}
+
+.ebook-tab[aria-selected="true"] {
+  color: #090b09;
+  border-color: var(--commerce-gold);
+  background: linear-gradient(135deg, #d5b274, #a88042);
+}
+
+.ebook-tab:focus-visible,
+.download-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.ebook-panel[hidden] {
+  display: none;
+}
+
+.download-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
+  gap: 2rem;
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  border: 1px solid rgba(193, 156, 92, 0.32);
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at top right, rgba(193, 156, 92, 0.16), transparent 42%),
+    linear-gradient(145deg, rgba(22, 27, 22, 0.98), rgba(8, 10, 8, 0.98));
+  box-shadow: 0 1.4rem 3.5rem rgba(0, 0, 0, 0.25);
+}
+
+.download-card h3 {
+  margin: 0.7rem 0 1rem;
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.download-card-copy > p:not(.download-version):not(.download-note) {
+  max-width: 58ch;
+  color: var(--commerce-muted);
+  line-height: 1.75;
+}
+
+.download-version {
+  margin: 1.1rem 0 0;
+  color: var(--commerce-gold);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1.1rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid #d5b274;
+  border-radius: 0.75rem;
+  color: #090b09;
+  background: linear-gradient(135deg, #d5b274, #a88042);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.download-note {
+  margin: 0.7rem 0 0;
+  color: var(--commerce-muted);
+  font-size: 0.86rem;
+}
+
+.download-contents {
+  padding: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.download-contents h4 {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+}
+
+.download-contents ol {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.download-contents li {
+  padding-left: 0.25rem;
+  color: var(--commerce-gold);
+}
+
+.download-contents strong,
+.download-contents span {
+  display: block;
+}
+
+.download-contents strong {
+  color: #fff;
+}
+
+.download-contents span {
+  margin-top: 0.25rem;
+  color: var(--commerce-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.download-scope {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem 1rem;
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--commerce-gold);
+  background: rgba(193, 156, 92, 0.08);
+}
+
+.download-scope strong {
+  color: var(--commerce-gold);
+}
+
+.download-scope p {
+  margin: 0;
+  color: var(--commerce-muted);
+}
+
+@media (max-width: 760px) {
+  .ebook-tabs {
+    width: 100%;
+  }
+
+  .ebook-tab {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .download-card {
+    grid-template-columns: 1fr;
+  }
+
+  .download-scope {
+    grid-template-columns: 1fr;
+  }
+}
