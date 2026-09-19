@@ -14,7 +14,7 @@ PAGE_LASTMOD = {
     "index.html": "2026-09-11",
     "jaki-waz-dla-ciebie/index.html": "2026-09-11",
     "porownaj-weze/index.html": "2026-09-11",
-    "ebooki.html": "2026-09-08",
+    "ebooki.html": "2026-09-19",
     "ogloszenia.html": "2026-09-08",
     "regulamin.html": "2026-09-08",
     "polityka-prywatnosci.html": "2026-09-08",
