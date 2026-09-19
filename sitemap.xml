@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gonzoexotics.pl/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.pl/assets/images/publikacje/surykatka-tofik/tofik-surykatka-w-domu-portret.webp</image:loc>
     </image:image>
@@ -32,8 +32,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://gonzoexotics.pl/jaki-waz-dla-ciebie/</loc>
+    <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.pl/porownaj-weze/</loc>
+    <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
     <loc>https://gonzoexotics.pl/ebooki.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/corallus-card.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://gonzoexotics.pl/ogloszenia.html</loc>
@@ -1073,13 +1084,5 @@
     <image:image>
       <image:loc>https://gonzoexotics.pl/assets/images/blog/smok-w-domu-drago/drago-teju-argentynski-na-kolanach.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://gonzoexotics.pl/jaki-waz-dla-ciebie/</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://gonzoexotics.pl/porownaj-weze/</loc>
-    <lastmod>2026-09-11</lastmod>
   </url>
 </urlset>
