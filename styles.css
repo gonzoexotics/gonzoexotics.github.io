@@ -1063,3 +1063,35 @@ img[width][height]{max-width:100%}
   html{scroll-behavior:auto!important}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+
+/* V25 — GA4, zgoda na analitykę i ustawienia prywatności */
+.analytics-consent{
+  position:fixed;z-index:10000;left:clamp(12px,2vw,28px);right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);
+  display:flex;align-items:center;justify-content:space-between;gap:28px;
+  max-width:1180px;margin:0 auto;padding:20px 22px;
+  border:1px solid rgba(215,167,45,.42);background:rgba(6,9,7,.98);
+  box-shadow:0 22px 70px rgba(0,0,0,.55);backdrop-filter:blur(14px)
+}
+.analytics-consent__copy{max-width:780px}
+.analytics-consent__copy strong{display:block;margin-bottom:6px;color:var(--gold-bright);font:500 20px/1.25 Georgia,"Times New Roman",serif}
+.analytics-consent__copy p{margin:0;color:#d5d0c7;font-size:13px;line-height:1.62}
+.analytics-consent__copy a{color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px}
+.analytics-consent__actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.analytics-consent__button{
+  min-height:44px;padding:11px 16px;border:1px solid var(--gold);background:var(--gold);color:#070907;
+  font:700 12px/1.2 Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.02em;cursor:pointer
+}
+.analytics-consent__button--secondary{background:transparent;color:#ece7dd;border-color:rgba(236,231,221,.48)}
+.analytics-consent__button:focus-visible,.privacy-settings-button:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.privacy-settings-button{
+  appearance:none;border:0;background:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px
+}
+@media(max-width:760px){
+  .analytics-consent{align-items:stretch;flex-direction:column;gap:16px;padding:18px}
+  .analytics-consent__actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .analytics-consent__button{width:100%}
+}
+@media(max-width:460px){
+  .analytics-consent__actions{grid-template-columns:1fr}
+}
