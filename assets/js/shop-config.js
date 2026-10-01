@@ -1,7 +1,7 @@
 /* Publiczna konfiguracja katalogów. Nie zapisuj tu haseł, kluczy API, danych klientów ani płatnych plików. */
 window.GONZO_SHOP_CONFIG = Object.freeze({
-  mode: "prelaunch",
-  salesEnabled: false,
+  mode: "external_checkout",
+  salesEnabled: true,
   seller: Object.freeze({
     legalName: "[NAZWA GONZO EXOTICS]",
     ownerName: "[IMIĘ I NAZWISKO]",
