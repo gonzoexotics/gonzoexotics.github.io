@@ -25,6 +25,9 @@
       <image:loc>https://gonzoexotics.pl/assets/images/gallery/corallus-caninus/corallus-caninus-galeria-10-960w.webp</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/ebooks/corallus-caninus/corallus-caninus-ebook-hero.webp</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://gonzoexotics.pl/assets/images/site/morelia-viridis-karta-gatunku-archiwum.webp</image:loc>
     </image:image>
     <image:image>
@@ -44,6 +47,22 @@
     <lastmod>2026-09-19</lastmod>
     <image:image>
       <image:loc>https://gonzoexotics.pl/corallus-card.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gonzoexotics.pl/platne-ebooki/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/ebooks/corallus-caninus/corallus-caninus-ebook-hero.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/ebooks/corallus-caninus/corallus-caninus-ebook-zakres.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/ebooks/corallus-caninus/corallus-caninus-ebook-format.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gonzoexotics.pl/assets/images/ebooks/corallus-caninus/corallus-caninus-ebook-dlaczego.webp</image:loc>
     </image:image>
   </url>
   <url>

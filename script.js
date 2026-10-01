@@ -1,6 +1,25 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
+const hasPaidEbookLink = nav && [...nav.querySelectorAll('a')].some((link) => {
+  try { return new URL(link.href, document.baseURI).pathname.replace(/\/+$/, '') === '/platne-ebooki'; }
+  catch (_) { return false; }
+});
+
+if (nav && !hasPaidEbookLink) {
+  const paidEbookLink = document.createElement('a');
+  paidEbookLink.href = '/platne-ebooki/';
+  paidEbookLink.textContent = 'Płatne e-booki';
+  if (window.location.pathname.replace(/\/+$/, '') === '/platne-ebooki') {
+    paidEbookLink.classList.add('active');
+    paidEbookLink.setAttribute('aria-current', 'page');
+  }
+
+  const ebooksLink = [...nav.querySelectorAll('a')].find((link) => link.textContent.trim() === 'Ebooki');
+  if (ebooksLink) ebooksLink.insertAdjacentElement('afterend', paidEbookLink);
+  else nav.appendChild(paidEbookLink);
+}
+
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
@@ -155,19 +174,37 @@ if(lightbox){const lbImg=lightbox.querySelector('img');document.querySelectorAll
   };
 
   document.addEventListener('click', (event) => {
-    const link = event.target.closest('a[data-ebook-download]');
-    if (!link || readConsent() !== CONSENT_GRANTED || !analyticsStarted) return;
+    if (readConsent() !== CONSENT_GRANTED || !analyticsStarted) return;
 
-    const fileUrl = new URL(link.getAttribute('href'), document.baseURI).href;
-    let fileName = fileUrl.split('/').pop()?.split('?')[0] || '';
-    try { fileName = decodeURIComponent(fileName); } catch (_) {}
+    const downloadLink = event.target.closest('a[data-ebook-download]');
+    if (downloadLink) {
+      const fileUrl = new URL(downloadLink.getAttribute('href'), document.baseURI).href;
+      let fileName = fileUrl.split('/').pop()?.split('?')[0] || '';
+      try { fileName = decodeURIComponent(fileName); } catch (_) {}
 
-    window.gtag('event', 'ebook_download', {
-      ebook_name: link.dataset.ebookName || 'Corallus caninus — 4 filary dobrego środowiska',
-      file_name: fileName,
-      file_url: fileUrl,
+      window.gtag('event', 'ebook_download', {
+        ebook_name: downloadLink.dataset.ebookName || 'Corallus caninus — 4 filary dobrego środowiska',
+        file_name: fileName,
+        file_url: fileUrl,
+        page_location: window.location.href,
+        link_text: downloadLink.textContent.replace(/\s+/g, ' ').trim()
+      });
+      return;
+    }
+
+    const purchaseLink = event.target.closest('a[data-purchase-cta]');
+    if (!purchaseLink) return;
+    const value = Number.parseFloat(purchaseLink.dataset.productPrice || '49.99');
+    window.gtag('event', 'begin_checkout', {
+      currency: 'PLN',
+      value: Number.isFinite(value) ? value : undefined,
+      items: [{
+        item_name: purchaseLink.dataset.productName || 'Corallus caninus — kompletny przewodnik hodowli i rozmnażania',
+        price: Number.isFinite(value) ? value : undefined,
+        quantity: 1
+      }],
       page_location: window.location.href,
-      link_text: link.textContent.replace(/\s+/g, ' ').trim()
+      link_url: purchaseLink.href
     });
   });
 
