@@ -1121,5 +1121,5 @@ img[width][height]{max-width:100%}
 .ebook-sales-hero__visual,.ebook-sales-wide-visual,.ebook-sales-split figure,.ebook-home-promo__visual{display:grid;place-items:center;padding:clamp(10px,1.25vw,22px)}
 .ebook-sales-hero__visual{width:min(100%,560px);justify-self:end}
 .ebook-sales-hero__visual img,.ebook-sales-wide-visual img,.ebook-sales-split figure img,.ebook-home-promo__visual img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
-@media(min-width:961px){.hero{min-height:min(760px,calc(100svh - 142px))}.hero-copy{justify-content:flex-start;padding-top:clamp(46px,4.2vw,70px);padding-bottom:clamp(46px,4.2vw,70px)}.hero-photo img{object-position:50% 24%}}
+@media(min-width:961px){.hero{height:min(760px,calc(100svh - 142px));min-height:min(760px,calc(100svh - 142px))}.hero-copy{justify-content:flex-start;padding-top:clamp(46px,4.2vw,70px);padding-bottom:clamp(46px,4.2vw,70px)}.hero-photo img{object-position:50% 40%}}
 @media(max-width:960px){.ebook-sales-hero__visual{justify-self:start;width:min(100%,560px)}}
