@@ -16,6 +16,14 @@ Pliki WebP poniżej są zoptymalizowanymi technicznie wersjami fotografii z Wiki
 | *Gonyosoma oxycephalum* | Bjørn Christian Tørrissen | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Gonyosoma_oxycephalum_Oslo.JPG) |
 | *Pituophis catenifer* | Awkonradi | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Pituophis_catenifer_catenifer.jpg) |
 | *Eryx colubrinus* | The Reptilarium | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Eryx_colubrinus_close_up.jpg) |
+| *Lampropeltis triangulum* | Peter Paplanus | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Eastern_Milk_Snake_(Lampropeltis_triangulum_triangulum)_(40682943834).jpg) |
+| *Pantherophis obsoletus* | Chuck Homler | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Black_Rat_Snake_(Pantherophis_obsoletus).jpg) |
+| *Elaphe schrenckii* | Kim, Hyun-tae | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Elaphe_schrenckii_from_South_Korea.jpg) |
+| *Boaedon fuliginosus* | Ltshears | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:African_House_Snake_005.jpg) |
+| *Eunectes notaeus* | Walter S. Prado | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | [strona pliku](https://commons.wikimedia.org/wiki/File:Eunectes_notaeus_54396531.jpg) |
+| *Eunectes murinus* | Diego Delso | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Anaconda_com%C3%BAn_(Eunectes_murinus),_Tierpark_Hellabrunn,_M%C3%BAnich,_Alemania,_2012-06-17,_DD_01.JPG) |
+| *Malayopython reticulatus* | Rushenb | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Malayopython_reticulatus,_Reticulated_python_-_Kaeng_Krachan_District,_Phetchaburi_Province_(47924282891).jpg) |
+| *Boiga dendrophila* | Holger Krisp | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) | [strona pliku](https://commons.wikimedia.org/wiki/File:Ularburong_Boiga_dendrophila.jpg) |
 
 Fotografie *Morelia viridis*, *Corallus caninus* i *Python bivittatus* są materiałami własnymi Gonzo Exotics.
 
