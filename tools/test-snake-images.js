@@ -3,7 +3,7 @@ const vm = require('vm');
 
 const context = { window: {}, console };
 vm.createContext(context);
-vm.runInContext(fs.readFileSync('snake-tools/assets/js/snake-data.js', 'utf8'), context);
+vm.runInContext(fs.readFileSync('assets/js/snake-data.js', 'utf8'), context);
 const { species } = context.window.GonzoSnakeData;
 const missing = [];
 

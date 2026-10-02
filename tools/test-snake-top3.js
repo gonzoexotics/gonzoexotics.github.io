@@ -4,7 +4,7 @@ const vm = require('vm');
 const context = { window: {}, console };
 vm.createContext(context);
 for (const file of ['assets/js/snake-data.js', 'assets/js/snake-engine.js']) {
-  vm.runInContext(fs.readFileSync(`snake-tools/${file}`, 'utf8'), context, { filename: file });
+  vm.runInContext(fs.readFileSync(`${file}`, 'utf8'), context, { filename: file });
 }
 
 const { species } = context.window.GonzoSnakeData;

@@ -9,10 +9,10 @@ const app = {
 const context = { window: {}, console };
 vm.createContext(context);
 for (const file of ['assets/js/snake-data.js', 'assets/js/snake-engine.js']) {
-  vm.runInContext(fs.readFileSync(`snake-tools/${file}`, 'utf8'), context, { filename: file });
+  vm.runInContext(fs.readFileSync(`${file}`, 'utf8'), context, { filename: file });
 }
 context.document = { getElementById(id) { return id === 'quiz-app' ? app : null; } };
-vm.runInContext(fs.readFileSync('snake-tools/assets/js/snake-quiz-v2.js', 'utf8'), context, { filename: 'snake-quiz-v2.js' });
+vm.runInContext(fs.readFileSync('assets/js/snake-quiz-v2.js', 'utf8'), context, { filename: 'snake-quiz-v2.js' });
 
 const click = dataset => clickHandler({ target: { closest: () => ({ dataset }) } });
 click({ action: 'start' });
