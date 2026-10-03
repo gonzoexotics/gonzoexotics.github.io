@@ -1,6 +1,4 @@
-import os
 import re
-import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,9 +13,9 @@ def menu(prefix: str) -> str:
         f'<a href="{prefix}index.html#gatunki">Gatunki</a>'
         f'<a href="{prefix}baza-wiedzy.html">Baza wiedzy</a>'
         f'<a href="{prefix}porownaj-weze/">Porównaj węże</a>'
-        f'<a href="{prefix}jaki-waz-dla-ciebie/">Darmowe materiały</a>'
+        f'<a href="{prefix}ebooki.html">Darmowe materiały</a>'
         f'<a href="{prefix}ebooki.html">E-booki</a>'
-        f'<a href="{prefix}index.html#dostepne">Dostępność</a>'
+        f'<a href="{prefix}ogloszenia.html">Dostępność</a>'
         f'<a href="{prefix}o-autorze.html">O autorze</a>'
         f'<a href="{prefix}index.html#kontakt">Kontakt</a>'
         '</nav>'
@@ -25,21 +23,11 @@ def menu(prefix: str) -> str:
 
 
 changed = []
-git = os.environ.get('GONZO_GIT')
-if not git:
-    raise SystemExit('Set GONZO_GIT to the Git executable before running this script.')
-
 for path in ROOT.rglob('*.html'):
     if '.git' in path.parts:
         continue
     relative = path.relative_to(ROOT).as_posix()
-    safe_directory = ROOT.as_posix()
-    source = subprocess.run(
-        [git, '-c', f'safe.directory={safe_directory}', '-C', str(ROOT), 'show', f'HEAD:{relative}'],
-        check=True,
-        capture_output=True,
-    ).stdout
-    text = source.decode('utf-8')
+    text = path.read_bytes().decode('utf-8')
     original = text
     if path.parent.name == 'baza-wiedzy' or path.parent.name in {'porownaj-weze', 'jaki-waz-dla-ciebie', 'platne-ebooki'}:
         prefix = '../'

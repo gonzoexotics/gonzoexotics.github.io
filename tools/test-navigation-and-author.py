@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = ('Strona główna', 'Gatunki', 'Baza wiedzy', 'Porównaj węże', 'Darmowe materiały', 'E-booki', 'Dostępność', 'O autorze', 'Kontakt')
+EXPECTED_TARGETS = ('index.html', 'index.html#gatunki', 'baza-wiedzy.html', 'porownaj-weze/', 'ebooki.html', 'ebooki.html', 'ogloszenia.html', 'o-autorze.html', 'index.html#kontakt')
 
 
 class Links(HTMLParser):
@@ -18,7 +19,7 @@ class Links(HTMLParser):
                 self.hrefs.append(href)
 
 
-menu_errors, link_errors, author_errors, schema_errors = [], [], [], []
+menu_errors, link_errors, author_errors, schema_errors, regulation_errors = [], [], [], [], []
 for path in ROOT.rglob('*.html'):
     if '.git' in path.parts:
         continue
@@ -30,6 +31,9 @@ for path in ROOT.rglob('*.html'):
         if tuple(re.findall(r'>([^<>]+)</a>', fragment)) != EXPECTED:
             menu_errors.append(str(path.relative_to(ROOT)))
         parser = Links(); parser.feed(fragment)
+        prefix = '../' if path.parent.name in {'baza-wiedzy', 'porownaj-weze', 'jaki-waz-dla-ciebie', 'platne-ebooki'} else ''
+        if tuple(parser.hrefs) != tuple(prefix + target for target in EXPECTED_TARGETS):
+            menu_errors.append(f'{path.relative_to(ROOT)}: wrong destinations')
         for href in parser.hrefs:
             target = (path.parent / href.split('#', 1)[0]).resolve()
             if href and not href.startswith(('http:', 'https:', 'mailto:', '#')) and not target.exists():
@@ -54,6 +58,13 @@ for path in ROOT.rglob('*.html'):
             if author.get('@type') != 'Person' or author.get('name') != 'Tomasz Gonsior' or author.get('url') != 'https://gonzoexotics.pl/o-autorze.html':
                 schema_errors.append(f'{path.relative_to(ROOT)}: inconsistent author schema')
 
-if menu_errors or link_errors or author_errors or schema_errors:
-    raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors)]))
-print('PASS: 32 identical navigation menus, valid local menu targets, linked article authors and consistent author schema.')
+regulation = (ROOT / 'regulamin.html').read_text(encoding='utf-8').lower()
+for forbidden in ('[nazwa gonzo exotics]', '[imię i nazwisko]', '[adres do korespondencji]', '[e-mail]', '[telefon]', '[nip – jeżeli wymagany]', 'wersja przygotowawcza'):
+    if forbidden in regulation:
+        regulation_errors.append(forbidden)
+if '<meta name="robots" content="noindex,follow">' not in regulation:
+    regulation_errors.append('regulamin must remain noindex until sales are launched')
+
+if menu_errors or link_errors or author_errors or schema_errors or regulation_errors:
+    raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors), 'regulamin=' + ', '.join(regulation_errors)]))
+print('PASS: 32 identical navigation menus, valid local menu targets, linked article authors, consistent author schema and a placeholder-free noindex regulation page.')
