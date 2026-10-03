@@ -1,25 +1,6 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
-const hasPaidEbookLink = nav && [...nav.querySelectorAll('a')].some((link) => {
-  try { return new URL(link.href, document.baseURI).pathname.replace(/\/+$/, '') === '/platne-ebooki'; }
-  catch (_) { return false; }
-});
-
-if (nav && !hasPaidEbookLink) {
-  const paidEbookLink = document.createElement('a');
-  paidEbookLink.href = '/platne-ebooki/';
-  paidEbookLink.textContent = 'Płatne e-booki';
-  if (window.location.pathname.replace(/\/+$/, '') === '/platne-ebooki') {
-    paidEbookLink.classList.add('active');
-    paidEbookLink.setAttribute('aria-current', 'page');
-  }
-
-  const ebooksLink = [...nav.querySelectorAll('a')].find((link) => link.textContent.trim() === 'Ebooki');
-  if (ebooksLink) ebooksLink.insertAdjacentElement('afterend', paidEbookLink);
-  else nav.appendChild(paidEbookLink);
-}
-
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');

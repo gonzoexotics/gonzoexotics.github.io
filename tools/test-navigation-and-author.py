@@ -19,7 +19,7 @@ class Links(HTMLParser):
                 self.hrefs.append(href)
 
 
-menu_errors, link_errors, author_errors, schema_errors, regulation_errors = [], [], [], [], []
+menu_errors, link_errors, author_errors, schema_errors, regulation_errors, runtime_menu_errors = [], [], [], [], [], []
 for path in ROOT.rglob('*.html'):
     if '.git' in path.parts:
         continue
@@ -65,6 +65,10 @@ for forbidden in ('[nazwa gonzo exotics]', '[imię i nazwisko]', '[adres do kore
 if '<meta name="robots" content="noindex,follow">' not in regulation:
     regulation_errors.append('regulamin must remain noindex until sales are launched')
 
-if menu_errors or link_errors or author_errors or schema_errors or regulation_errors:
-    raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors), 'regulamin=' + ', '.join(regulation_errors)]))
+script = (ROOT / 'script.js').read_text(encoding='utf-8')
+if 'Płatne e-booki' in script:
+    runtime_menu_errors.append('script.js must not inject an extra paid e-book menu item')
+
+if menu_errors or link_errors or author_errors or schema_errors or regulation_errors or runtime_menu_errors:
+    raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors), 'regulamin=' + ', '.join(regulation_errors), 'runtime_menu=' + ', '.join(runtime_menu_errors)]))
 print('PASS: 32 identical navigation menus, valid local menu targets, linked article authors, consistent author schema and a placeholder-free noindex regulation page.')
