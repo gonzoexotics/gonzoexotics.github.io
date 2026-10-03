@@ -19,7 +19,7 @@ class Links(HTMLParser):
                 self.hrefs.append(href)
 
 
-menu_errors, link_errors, author_errors, schema_errors, regulation_errors, runtime_menu_errors = [], [], [], [], [], []
+menu_errors, link_errors, author_errors, schema_errors, regulation_errors, privacy_errors, phone_errors, runtime_menu_errors = [], [], [], [], [], [], [], []
 for path in ROOT.rglob('*.html'):
     if '.git' in path.parts:
         continue
@@ -62,16 +62,30 @@ regulation = (ROOT / 'regulamin.html').read_text(encoding='utf-8').lower()
 for forbidden in ('[nazwa gonzo exotics]', '[imię i nazwisko]', '[adres do korespondencji]', '[e-mail]', '[telefon]', '[nip – jeżeli wymagany]', 'wersja przygotowawcza', 'dokument roboczy'):
     if forbidden in regulation:
         regulation_errors.append(forbidden)
-if 'noindex' in regulation:
-    regulation_errors.append('regulamin must be indexable after sales launch')
-for required in ('tomasz gonsior', 'osiedle andaluzja 9/2/7', '41-949 piekary śląskie', 'gonsiortomasz@gmail.com', '1koszyk', 'autopay', 'treści cyfrow', 'odstąpienia', 'reklamacj', 'prawa autorskie', 'polityka prywatności'):
+if '<meta name="robots" content="noindex,follow">' not in regulation:
+    regulation_errors.append('regulamin must remain noindex,follow')
+for required in ('tomasz gonsior', 'osiedle andaluzja 9/2/7', '41-949 piekary śląskie', 'gonsiortomasz@gmail.com', '+48 724 523 225', '1koszyk', 'autopay', 'treści cyfrow', 'odstąpienia', 'reklamacj', 'prawa autorskie', 'polityka prywatności', 'wzór formularza odstąpienia od umowy'):
     if required not in regulation:
         regulation_errors.append('missing ' + required)
+
+privacy = (ROOT / 'polityka-prywatnosci.html').read_text(encoding='utf-8').lower()
+for required in ('sprzedaż e-booka przez 1koszyk', 'fsi sp. z o.o.', 'autopay', 'art. 6 ust. 1 lit. b rodo', 'art. 6 ust. 1 lit. c rodo', 'art. 6 ust. 1 lit. f rodo', 'prezesa urzędu ochrony danych osobowych'):
+    if required not in privacy:
+        privacy_errors.append('missing ' + required)
+
+phone_pattern = re.compile(r'(?:\+48\s*724\s*523\s*225|\+48724523225|724\s*523\s*225)')
+for path in ROOT.rglob('*.html'):
+    if phone_pattern.search(path.read_text(encoding='utf-8')) and path.name != 'regulamin.html':
+        phone_errors.append(str(path.relative_to(ROOT)))
+if phone_pattern.search((ROOT / 'sitemap.xml').read_text(encoding='utf-8')):
+    phone_errors.append('sitemap.xml')
+if 'regulamin.html' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8'):
+    regulation_errors.append('regulamin must not be in sitemap.xml')
 
 script = (ROOT / 'script.js').read_text(encoding='utf-8')
 if 'Płatne e-booki' in script:
     runtime_menu_errors.append('script.js must not inject an extra paid e-book menu item')
 
-if menu_errors or link_errors or author_errors or schema_errors or regulation_errors or runtime_menu_errors:
-    raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors), 'regulamin=' + ', '.join(regulation_errors), 'runtime_menu=' + ', '.join(runtime_menu_errors)]))
-print('PASS: 32 identical navigation menus, valid local menu targets, linked article authors, consistent author schema and a final indexed e-book sales regulation page.')
+if menu_errors or link_errors or author_errors or schema_errors or regulation_errors or privacy_errors or phone_errors or runtime_menu_errors:
+    raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors), 'regulamin=' + ', '.join(regulation_errors), 'privacy=' + ', '.join(privacy_errors), 'phone=' + ', '.join(phone_errors), 'runtime_menu=' + ', '.join(runtime_menu_errors)]))
+print('PASS: navigation, local references, author schema, sales documents, noindex regulation and phone privacy checks pass.')
