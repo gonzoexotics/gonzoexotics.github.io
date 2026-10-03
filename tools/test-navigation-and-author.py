@@ -59,11 +59,14 @@ for path in ROOT.rglob('*.html'):
                 schema_errors.append(f'{path.relative_to(ROOT)}: inconsistent author schema')
 
 regulation = (ROOT / 'regulamin.html').read_text(encoding='utf-8').lower()
-for forbidden in ('[nazwa gonzo exotics]', '[imię i nazwisko]', '[adres do korespondencji]', '[e-mail]', '[telefon]', '[nip – jeżeli wymagany]', 'wersja przygotowawcza'):
+for forbidden in ('[nazwa gonzo exotics]', '[imię i nazwisko]', '[adres do korespondencji]', '[e-mail]', '[telefon]', '[nip – jeżeli wymagany]', 'wersja przygotowawcza', 'dokument roboczy'):
     if forbidden in regulation:
         regulation_errors.append(forbidden)
-if '<meta name="robots" content="noindex,follow">' not in regulation:
-    regulation_errors.append('regulamin must remain noindex until sales are launched')
+if 'noindex' in regulation:
+    regulation_errors.append('regulamin must be indexable after sales launch')
+for required in ('tomasz gonsior', 'osiedle andaluzja 9/2/7', '41-949 piekary śląskie', 'gonsiortomasz@gmail.com', '1koszyk', 'autopay', 'treści cyfrow', 'odstąpienia', 'reklamacj', 'prawa autorskie', 'polityka prywatności'):
+    if required not in regulation:
+        regulation_errors.append('missing ' + required)
 
 script = (ROOT / 'script.js').read_text(encoding='utf-8')
 if 'Płatne e-booki' in script:
@@ -71,4 +74,4 @@ if 'Płatne e-booki' in script:
 
 if menu_errors or link_errors or author_errors or schema_errors or regulation_errors or runtime_menu_errors:
     raise SystemExit('\n'.join(['menu=' + ', '.join(menu_errors), 'links=' + ', '.join(link_errors), 'author=' + ', '.join(author_errors), 'schema=' + ', '.join(schema_errors), 'regulamin=' + ', '.join(regulation_errors), 'runtime_menu=' + ', '.join(runtime_menu_errors)]))
-print('PASS: 32 identical navigation menus, valid local menu targets, linked article authors, consistent author schema and a placeholder-free noindex regulation page.')
+print('PASS: 32 identical navigation menus, valid local menu targets, linked article authors, consistent author schema and a final indexed e-book sales regulation page.')

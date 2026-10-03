@@ -1,14 +1,14 @@
 /* Publiczna konfiguracja katalogów. Nie zapisuj tu haseł, kluczy API, danych klientów ani płatnych plików. */
 window.GONZO_SHOP_CONFIG = Object.freeze({
   mode: "external_checkout",
-  salesEnabled: false,
+  salesEnabled: true,
   seller: Object.freeze({
-    legalName: "[NAZWA GONZO EXOTICS]",
-    ownerName: "[IMIĘ I NAZWISKO]",
-    correspondenceAddress: "[ADRES DO KORESPONDENCJI]",
-    email: "[E-MAIL]",
-    phone: "[TELEFON]",
-    taxId: "[NIP – JEŻELI WYMAGANY]"
+    legalName: "Tomasz Gonsior",
+    ownerName: "Tomasz Gonsior",
+    brandName: "Gonzo Exotics",
+    activityType: "działalność nierejestrowana",
+    correspondenceAddress: "Osiedle Andaluzja 9/2/7, 41-949 Piekary Śląskie, Polska",
+    email: "gonsiortomasz@gmail.com"
   }),
   // To są nazwy wymaganych pól przyszłych rekordów, a nie aktywne produkty ani ogłoszenia.
   schemas: Object.freeze({
