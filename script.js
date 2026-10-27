@@ -32,6 +32,22 @@ if(lightbox){const lbImg=lightbox.querySelector('img');document.querySelectorAll
   const CONSENT_GRANTED = 'granted';
   const CONSENT_DENIED = 'denied';
   let analyticsStarted = false;
+  const isEnglishPage = document.documentElement.lang.toLowerCase().startsWith('en');
+  const consentCopy = isEnglishPage ? {
+    title: 'Privacy and analytics',
+    description: 'We would like to use optional Google Analytics 4 to understand visits and free guide downloads. Analytics starts only if you agree. The site works normally if you decline.',
+    policy: 'Privacy policy (in Polish)',
+    reject: 'Decline',
+    accept: 'Accept analytics',
+    settings: 'Privacy settings'
+  } : {
+    title: 'Prywatność i statystyki',
+    description: 'Chcemy używać opcjonalnego Google Analytics 4, aby mierzyć ruch na stronie i pobrania darmowych materiałów. Analityka uruchomi się dopiero po Twojej zgodzie. Strona działa tak samo po odmowie.',
+    policy: 'Polityka prywatności',
+    reject: 'Nie zgadzam się',
+    accept: 'Akceptuję analitykę',
+    settings: 'Ustawienia prywatności'
+  };
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
@@ -105,12 +121,12 @@ if(lightbox){const lbImg=lightbox.querySelector('img');document.querySelectorAll
     banner.setAttribute('aria-labelledby', 'analytics-consent-title');
     banner.innerHTML = `
       <div class="analytics-consent__copy">
-        <strong id="analytics-consent-title">Prywatność i statystyki</strong>
-        <p>Chcemy używać opcjonalnego Google Analytics 4, aby mierzyć ruch na stronie i pobrania darmowych materiałów. Analityka uruchomi się dopiero po Twojej zgodzie. Strona działa tak samo po odmowie. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+        <strong id="analytics-consent-title">${consentCopy.title}</strong>
+        <p>${consentCopy.description} <a href="/polityka-prywatnosci.html">${consentCopy.policy}</a>.</p>
       </div>
       <div class="analytics-consent__actions">
-        <button type="button" class="analytics-consent__button analytics-consent__button--secondary" data-analytics-reject>Nie zgadzam się</button>
-        <button type="button" class="analytics-consent__button" data-analytics-accept>Akceptuję analitykę</button>
+        <button type="button" class="analytics-consent__button analytics-consent__button--secondary" data-analytics-reject>${consentCopy.reject}</button>
+        <button type="button" class="analytics-consent__button" data-analytics-accept>${consentCopy.accept}</button>
       </div>
     `;
     document.body.appendChild(banner);
@@ -148,7 +164,7 @@ if(lightbox){const lbImg=lightbox.querySelector('img');document.querySelectorAll
     button.type = 'button';
     button.className = 'privacy-settings-button';
     button.dataset.privacySettings = 'true';
-    button.textContent = 'Ustawienia prywatności';
+    button.textContent = consentCopy.settings;
     button.addEventListener('click', showConsentBanner);
 
     footerLinks.append(separator, button);
@@ -165,6 +181,8 @@ if(lightbox){const lbImg=lightbox.querySelector('img');document.querySelectorAll
 
       window.gtag('event', 'ebook_download', {
         ebook_name: downloadLink.dataset.ebookName || 'Corallus caninus — 4 filary dobrego środowiska',
+        ebook_language: downloadLink.dataset.ebookLanguage || (isEnglishPage ? 'en' : 'pl'),
+        file_extension: fileName.split('.').pop()?.toLowerCase() || '',
         file_name: fileName,
         file_url: fileUrl,
         page_location: window.location.href,
