@@ -1,0 +1,72 @@
+/* Scoped to the Corallus journal: keep photo captions in normal text flow. */
+.journal-page .article-photo,
+.journal-page .article-photo.portrait-break {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  content-visibility: visible;
+  contain-intrinsic-size: none;
+  margin: 2rem 0 2.8rem;
+}
+.journal-page .article-photo img,
+.journal-page .article-photo.portrait-break img,
+.journal-page .article-photo.wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.journal-page .article-photo.portrait-break img {
+  width: min(100%, 620px);
+  margin-inline: auto;
+}
+.journal-page .article-photo figcaption,
+.journal-page .article-photo.portrait-break figcaption {
+  display: block;
+  min-width: 0;
+  padding: 1rem 1.2rem;
+  border-left: 0;
+  border-top: 1px solid rgba(215,167,45,.2);
+  color: #c8c1b5;
+  font: 400 15px/1.7 Inter, "Segoe UI", Arial, sans-serif;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+.journal-page .article-photo figcaption strong { color: #e1c879; }
+.journal-page .article-photo figcaption em { display: inline; }
+.journal-page .article-photo img[src*="glowa-i-zwoje"] { filter: brightness(1.06) contrast(.98); }
+.journal-page .article-photo a { display: block; }
+.journal-page .article-photo a:focus-visible { outline: 3px solid #e1c879; outline-offset: -3px; }
+.journal-page .journal-photo-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.25rem; margin: 2rem 0; }
+.journal-page .journal-photo-pair .article-photo { margin: 0; }
+.journal-page .journal-photo-pair .article-photo img { width: 100%; }
+.journal-page .journal-status { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin: 2rem 0; }
+.journal-page .journal-status > div { padding: 1.3rem; border: 1px solid rgba(215,167,45,.25); background: rgba(215,167,45,.035); min-width: 0; }
+.journal-page .journal-status span { display: block; color: #c8c1b5; font-size: .78rem; line-height: 1.5; }
+.journal-page .journal-status strong { display: block; margin: .7rem 0; color: #e8cb75; font: 500 clamp(1.5rem,2.8vw,2rem)/1.2 Georgia,serif; }
+.journal-page .journal-status p { margin: 0; font-size: .85rem; line-height: 1.6; }
+.journal-page .journal-photo-note { color: #a9a395; font-size: .85rem; }
+.journal-page .article-hero-photo img { object-position: 50% 56%; }
+.journal-page .journal-ref { color: #dfc679; white-space: nowrap; font-size: .8em; text-decoration: underline; text-underline-offset: 3px; }
+/* A long desktop menu must not push either journal beyond the viewport. */
+@media (min-width:1321px) and (max-width:1600px) {
+  .journal-page .site-header { min-height: 104px; }
+  .journal-page .brand { min-width: auto; }
+  .journal-page .brand-mark { width: 60px; height: 60px; font-size: 34px; }
+  .journal-page .brand-copy strong { font-size: 32px; }
+  .journal-page .brand-copy > span { font-size: 13px; }
+  .journal-page .brand-copy small { display: none; }
+  .journal-page .menu-toggle { display: block; z-index: 60; }
+  .journal-page .main-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; padding: 18px 28px 30px; background: rgba(4,6,5,.98); border-bottom: 1px solid var(--line); }
+  .journal-page .main-nav.open { display: flex; }
+  .journal-page .main-nav a { padding: 13px 0; }
+}
+@media(max-width:760px) {
+  .journal-page .journal-status { grid-template-columns: 1fr; gap: .7rem; }
+  .journal-page .journal-photo-pair { grid-template-columns: 1fr; gap: 1.5rem; }
+  .journal-page .article-photo figcaption,
+  .journal-page .article-photo.portrait-break figcaption { padding: 1rem; font-size: 14px; }
+}
