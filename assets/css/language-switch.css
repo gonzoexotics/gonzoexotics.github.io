@@ -1,0 +1,21 @@
+/* Scoped language controls. Existing navigation and content rules are unchanged. */
+.language-switch{position:absolute;top:5px;right:clamp(22px,4vw,64px);display:flex;align-items:center;gap:2px;font:600 12px/1.2 Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.035em;color:var(--muted,#bcb7a9);z-index:65}
+.language-switch>a,.language-switch__current,.language-switch summary{display:flex;align-items:center;justify-content:center;min-width:30px;min-height:30px;padding:4px;box-sizing:border-box}
+.language-switch>a,.language-switch summary{color:var(--text,#f3f0e8);cursor:pointer;text-decoration:none}
+.language-switch__current{color:var(--gold-bright,#f1c44a);text-decoration:underline;text-underline-offset:4px}
+.language-switch>a:hover,.language-switch summary:hover{color:var(--gold-bright,#f1c44a)}
+.language-switch a:focus-visible,.language-switch summary:focus-visible{outline:2px solid var(--gold-bright,#f1c44a);outline-offset:2px}
+.language-switch details{position:static}
+.language-switch summary{list-style:none}
+.language-switch summary::-webkit-details-marker{display:none}
+.language-switch__panel{position:absolute;right:0;top:calc(100% + 6px);width:min(260px,calc(100vw - 32px));padding:16px;border:1px solid var(--line,rgba(215,167,45,.55));background:#080b08;box-shadow:0 10px 28px #0008;font-size:13px;line-height:1.6;letter-spacing:normal}
+.language-switch__panel p{margin:0 0 10px}
+.language-switch__panel a{display:block;min-height:44px;padding:10px 0;color:var(--gold-bright,#f1c44a);text-decoration:underline;text-underline-offset:3px}
+.i18n-language-note{font-size:.75em;white-space:nowrap;letter-spacing:0;text-transform:none;opacity:.85}
+.english-ebooks .site-header{position:relative}
+/* English labels are longer; fit the same navigation in its existing desktop row. */
+html[lang="en"] .main-nav{gap:clamp(10px,1vw,20px)}
+html[lang="en"] .main-nav a{font-size:12px}
+@media(max-width:1320px){.language-switch{top:50%;right:78px;transform:translateY(-50%)}.language-switch__panel{right:-62px}.english-ebooks .language-switch{top:24px;right:20px;transform:none}.english-ebooks .language-switch__panel{right:0}}
+@media(max-width:720px){.language-switch{right:64px}.language-switch__panel{right:-48px}.language-switch>a,.language-switch__current,.language-switch summary{min-width:29px;min-height:44px}.english-ebooks .language-switch{top:18px;right:16px}.english-ebooks .language-switch__panel{right:0}}
+@media(max-width:360px){.language-switch{font-size:11px;gap:1px}.language-switch>a,.language-switch__current,.language-switch summary{min-width:25px}}
