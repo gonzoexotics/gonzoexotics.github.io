@@ -10,6 +10,8 @@
       tab.tabIndex = selected ? 0 : -1;
       if (selected && moveFocus) tab.focus();
     });
+    const instructions = document.querySelector("[data-ebook-free-instructions]");
+    if (instructions) instructions.hidden = name !== "darmowe";
     panels.forEach(panel => {
       panel.hidden = panel.dataset.ebookPanel !== name;
     });
